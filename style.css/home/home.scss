@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Ciutadella Rounded', sans-serif;
+}
+
+[data-aos="new-animation"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    &.aos-animate {
+        opacity: 1;
+    }
+}
+
+ :root {
+    --var-light: #f1f1ea;
+    --var-blue: #0948eb;
+    --var-cyan: #06eaf7;
+}
+
+body {
+    background-color: var(--var-light);
+    font-family: sans-serif;
+    color: var(--var-blue);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.svg {
+    width: 20%;
+}
+
+.blue {
+    width: 20%;
+}
+
+// Navbar
+nav {
+    display: flex;
+    padding: 15px 15px;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    #logo {
+        display: flex;
+        align-items: center;
+        .logo__img {
+            svg {
+                width: 140px;
+            }
+        }
+        a {
+            color: var(--var-blue);
+            letter-spacing: 1px;
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+    #nav__list {
+        ul {
+            display: flex;
+            flex-direction: row;
+            li {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                a {
+                    position: relative;
+                    text-transform: uppercase;
+                    color: var(--var-blue);
+                    font-size: 0.9rem;
+                    font-weight: 800;
+                    padding: 2px 0;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 0%;
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: var(--var-blue);
+                        transition: 0.3s;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+                .toggle {
+                    cursor: pointer;
+                    position: relative;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background-color: var(--var-blue);
+                    margin-left: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    span {
+                        position: absolute;
+                        background-color: var(--var-light);
+                        width: 22px;
+                        height: 2px;
+                        border-radius: 4px;
+                        z-index: 1;
+                        transition: 0.3s;
+                        &:nth-child(1) {
+                            transform: translateY(-5px);
+                        }
+                        &:nth-child(2) {
+                            transform: translateY(5px);
+                            width: 14px;
+                            left: 19px;
+                        }
+                    }
+                    &.active span {
+                        width: 20px;
+                        height: 2px;
+                        &:nth-child(1) {
+                            transform: translateY(0) rotate(45deg);
+                        }
+                        &:nth-child(2) {
+                            transform: translateY(0px) rotate(-45deg);
+                        }
+                    }
+                }
+            }
+            .dot__space {
+                padding: 5px;
+            }
+        }
+    }
+}
+
+svg .blue {
+    color: #f1f1ea;
+}
+
+// Header 
+#header {
+    .container {
+        position: relative;
+        // Headeriin zuun taliin textuud
+        .header__content {
+            width: 65vw;
+            height: 100vh;
+            margin-left: 40px;
+            padding: 250px 200px;
+            position: relative;
+            h1 {
+                text-transform: uppercase;
+                font-size: 80px;
+                font-weight: 800;
+                line-height: 80px;
+            }
+            .sub__header {
+                font-weight: normal;
+                margin-bottom: 15px;
+            }
+            .header__text {
+                font-size: 20px;
+                width: 75%;
+                line-height: 1.3rem;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            .btn-div {
+                display: inline-block;
+                padding: 8px 0px;
+                border: 2px solid var(--var-blue);
+                color: var(--var-blue);
+                font-size: 16px;
+                font-weight: 600;
+                &:hover {
+                    color: var(--var-light);
+                    background-color: var(--var-blue);
+                }
+            }
+            .btn {
+                padding: 8px 10px;
+                border: 2px solid var(--var-blue);
+                color: var(--var-blue);
+                font-size: 16px;
+                font-weight: 600;
+                &:hover {
+                    color: var(--var-light);
+                    background-color: var(--var-blue);
+                }
+            }
+        }
+        // Headeriin baruun taliin zuraguud 
+        .header__right {
+            width: 50vw;
+            .header__image {
+                position: absolute;
+                top: 15%;
+                left: 50%;
+                width: 570px;
+                height: 570px;
+                background: url(/Videa/img/teeth.png);
+                background-size: cover;
+                background-position: center;
+                z-index: 999;
+            }
+            .header__bg {
+                position: absolute;
+                top: 5%;
+                left: 30%;
+                height: 100vh;
+                width: 60%;
+                overflow: visible;
+                .svg-1,
+                .svg-2 {
+                    position: absolute;
+                    width: 1700px;
+                    height: 1700px;
+                    .svg {
+                        top: 7%;
+                        left: 20%;
+                        width: 100%;
+                        position: absolute;
+                        transform: rotate(5deg);
+                    }
+                    .blue {
+                        position: absolute;
+                        top: 0%;
+                        left: 30%;
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
+}
