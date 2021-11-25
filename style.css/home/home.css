@@ -280,6 +280,8 @@ svg .blue {
   background-size: cover;
   background-position: center;
   z-index: 999;
+  -webkit-animation: skewTrans 0.7s;
+          animation: skewTrans 0.7s;
 }
 
 #header .container .header__right .header__bg {
@@ -317,6 +319,32 @@ svg .blue {
           transform: rotate(0deg);
 }
 
+@-webkit-keyframes navTrans {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes navTrans {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 @-webkit-keyframes transitionOn {
   0% {
     opacity: 0;
@@ -340,6 +368,32 @@ svg .blue {
     opacity: 1;
     -webkit-transform: rotateX(0);
             transform: rotateX(0);
+  }
+}
+
+@-webkit-keyframes skewTrans {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(50px, 200px) skew(0deg, 10deg);
+            transform: translate(50px, 200px) skew(0deg, 10deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes skewTrans {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(50px, 200px) skew(0deg, 10deg);
+            transform: translate(50px, 200px) skew(0deg, 10deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=home.css.map */

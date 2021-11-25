@@ -219,6 +219,7 @@ svg .blue {
                 background-size: cover;
                 background-position: center;
                 z-index: 999;
+                animation: skewTrans 0.7s;
             }
             .header__bg {
                 position: absolute;
@@ -256,6 +257,17 @@ svg .blue {
 //         animation-delay: 1s;
 //     }
 // }
+@keyframes navTrans {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes transitionOn {
     0% {
         opacity: 0;
@@ -264,5 +276,16 @@ svg .blue {
     100% {
         opacity: 1;
         transform: rotateX(0);
+    }
+}
+
+@keyframes skewTrans {
+    0% {
+        opacity: 0;
+        transform: translate(50px, 200px) skew(0deg, 10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
