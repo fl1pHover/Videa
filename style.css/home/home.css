@@ -1,9 +1,12 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow: hidden;
   font-family: 'Ciutadella Rounded', sans-serif;
 }
 
@@ -29,6 +32,7 @@ body {
   background-color: var(--var-light);
   font-family: sans-serif;
   color: var(--var-blue);
+  overflow: hidden;
 }
 
 a {
@@ -210,11 +214,15 @@ svg .blue {
   font-size: 80px;
   font-weight: 800;
   line-height: 80px;
+  -webkit-animation: transitionOn 0.8s;
+          animation: transitionOn 0.8s;
 }
 
 #header .container .header__content .sub__header {
   font-weight: normal;
   margin-bottom: 15px;
+  -webkit-animation: transitionOn 0.85s;
+          animation: transitionOn 0.85s;
 }
 
 #header .container .header__content .header__text {
@@ -223,15 +231,21 @@ svg .blue {
   line-height: 1.3rem;
   padding: 10px;
   margin-bottom: 10px;
+  -webkit-animation: transitionOn 1s;
+          animation: transitionOn 1s;
 }
 
 #header .container .header__content .btn-div {
   display: inline-block;
   padding: 8px 0px;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   border: 2px solid var(--var-blue);
   color: var(--var-blue);
   font-size: 16px;
   font-weight: 600;
+  -webkit-animation: transitionOn 1.3s;
+          animation: transitionOn 1.3s;
 }
 
 #header .container .header__content .btn-div:hover {
@@ -262,7 +276,7 @@ svg .blue {
   left: 50%;
   width: 570px;
   height: 570px;
-  background: url(/Videa/img/teeth.png);
+  background: url(/img/teeth.png);
   background-size: cover;
   background-position: center;
   z-index: 999;
@@ -301,5 +315,31 @@ svg .blue {
   left: 30%;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+}
+
+@-webkit-keyframes transitionOn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+}
+
+@keyframes transitionOn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
 }
 /*# sourceMappingURL=home.css.map */

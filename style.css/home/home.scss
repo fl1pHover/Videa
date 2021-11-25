@@ -1,8 +1,11 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
 * {
     margin: 0;
     padding: 0%;
     box-sizing: border-box;
-    overflow: hidden;
     font-family: 'Ciutadella Rounded', sans-serif;
 }
 
@@ -24,6 +27,7 @@ body {
     background-color: var(--var-light);
     font-family: sans-serif;
     color: var(--var-blue);
+    overflow: hidden;
 }
 
 a {
@@ -161,10 +165,12 @@ svg .blue {
                 font-size: 80px;
                 font-weight: 800;
                 line-height: 80px;
+                animation: transitionOn 0.8s;
             }
             .sub__header {
                 font-weight: normal;
                 margin-bottom: 15px;
+                animation: transitionOn 0.85s;
             }
             .header__text {
                 font-size: 20px;
@@ -172,14 +178,17 @@ svg .blue {
                 line-height: 1.3rem;
                 padding: 10px;
                 margin-bottom: 10px;
+                animation: transitionOn 1s;
             }
             .btn-div {
                 display: inline-block;
                 padding: 8px 0px;
+                animation-delay: 3s;
                 border: 2px solid var(--var-blue);
                 color: var(--var-blue);
                 font-size: 16px;
                 font-weight: 600;
+                animation: transitionOn 1.3s;
                 &:hover {
                     color: var(--var-light);
                     background-color: var(--var-blue);
@@ -206,7 +215,7 @@ svg .blue {
                 left: 50%;
                 width: 570px;
                 height: 570px;
-                background: url(/Videa/img/teeth.png);
+                background: url(/img/teeth.png);
                 background-size: cover;
                 background-position: center;
                 z-index: 999;
@@ -239,5 +248,21 @@ svg .blue {
                 }
             }
         }
+    }
+}
+
+// .header__content {
+//     .btn-div {
+//         animation-delay: 1s;
+//     }
+// }
+@keyframes transitionOn {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0);
     }
 }
