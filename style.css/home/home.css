@@ -114,6 +114,8 @@ nav #nav__list ul li a {
   font-size: 0.9rem;
   font-weight: 800;
   padding: 2px 0;
+  -webkit-animation: navTrans 1s;
+          animation: navTrans 1s;
 }
 
 nav #nav__list ul li a::after {
@@ -207,6 +209,7 @@ svg .blue {
   margin-left: 40px;
   padding: 250px 200px;
   position: relative;
+  display: block;
 }
 
 #header .container .header__content h1 {
@@ -235,7 +238,7 @@ svg .blue {
           animation: transitionOn 1s;
 }
 
-#header .container .header__content .btn-div {
+#header .container .header__content .btn {
   display: inline-block;
   padding: 8px 0px;
   -webkit-animation-delay: 3s;
@@ -246,14 +249,6 @@ svg .blue {
   font-weight: 600;
   -webkit-animation: transitionOn 1.3s;
           animation: transitionOn 1.3s;
-}
-
-#header .container .header__content .btn-div:hover {
-  color: var(--var-light);
-  background-color: var(--var-blue);
-}
-
-#header .container .header__content .btn {
   padding: 8px 10px;
   border: 2px solid var(--var-blue);
   color: var(--var-blue);
@@ -293,30 +288,41 @@ svg .blue {
   overflow: visible;
 }
 
-#header .container .header__right .header__bg .svg-1,
-#header .container .header__right .header__bg .svg-2 {
+#header .container .header__right .header__bg .svg-1 {
   position: absolute;
   width: 1700px;
   height: 1700px;
 }
 
-#header .container .header__right .header__bg .svg-1 .svg,
-#header .container .header__right .header__bg .svg-2 .svg {
+#header .container .header__right .header__bg .svg-1 .svg {
   top: 7%;
   left: 20%;
   width: 100%;
   position: absolute;
   -webkit-transform: rotate(5deg);
           transform: rotate(5deg);
+  -webkit-animation: waveTrans 1.3s;
+          animation: waveTrans 1.3s;
 }
 
-#header .container .header__right .header__bg .svg-1 .blue,
+#header .container .header__right .header__bg .svg-2 {
+  position: absolute;
+  width: 1700px;
+  height: 1700px;
+}
+
 #header .container .header__right .header__bg .svg-2 .blue {
+  width: 100%;
+  position: absolute;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
   position: absolute;
   top: 0%;
   left: 30%;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+  -webkit-animation: waveTrans 1s;
+          animation: waveTrans 1s;
 }
 
 @-webkit-keyframes navTrans {
@@ -394,6 +400,36 @@ svg .blue {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes waveTrans {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: tramslateY(0);
+            transform: tramslateY(0);
+  }
+}
+
+@keyframes waveTrans {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: tramslateY(0);
+            transform: tramslateY(0);
   }
 }
 /*# sourceMappingURL=home.css.map */

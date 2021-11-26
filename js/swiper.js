@@ -1,4 +1,5 @@
 const swiper = new Swiper('.swiper', {
+
     // Optional parameters
     direction: 'vertical',
     loop: true,
@@ -9,7 +10,22 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true,
+        // dynamicBullets: true;
     },
+    // autoplay: {
+    //     delay: 350;
+
+    // }
+    // on: {
+    //     slideChangeTransitionStart: function() {
+    //         $('.swiper-slide').css("left", "0");
+
+    //         $('.swiper-slide').css("left", "150px");
+    //     },
+    //     slideChange: function() {
+    //         $(".swiper-skli")
+    //     }
+    // }
 
 
     // Navigation arrows
@@ -22,8 +38,4 @@ const swiper = new Swiper('.swiper', {
     fadeEffect: {
         crossFade: true
     },
-
-
-
-    // And if we need scrollbar
 });

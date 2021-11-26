@@ -84,6 +84,7 @@ nav {
                     font-size: 0.9rem;
                     font-weight: 800;
                     padding: 2px 0;
+                    animation: navTrans 1s;
                     &::after {
                         content: '';
                         position: absolute;
@@ -160,6 +161,7 @@ svg .blue {
             margin-left: 40px;
             padding: 250px 200px;
             position: relative;
+            display: block;
             h1 {
                 text-transform: uppercase;
                 font-size: 80px;
@@ -180,7 +182,7 @@ svg .blue {
                 margin-bottom: 10px;
                 animation: transitionOn 1s;
             }
-            .btn-div {
+            .btn {
                 display: inline-block;
                 padding: 8px 0px;
                 animation-delay: 3s;
@@ -189,12 +191,6 @@ svg .blue {
                 font-size: 16px;
                 font-weight: 600;
                 animation: transitionOn 1.3s;
-                &:hover {
-                    color: var(--var-light);
-                    background-color: var(--var-blue);
-                }
-            }
-            .btn {
                 padding: 8px 10px;
                 border: 2px solid var(--var-blue);
                 color: var(--var-blue);
@@ -228,8 +224,7 @@ svg .blue {
                 height: 100vh;
                 width: 60%;
                 overflow: visible;
-                .svg-1,
-                .svg-2 {
+                .svg-1 {
                     position: absolute;
                     width: 1700px;
                     height: 1700px;
@@ -239,12 +234,22 @@ svg .blue {
                         width: 100%;
                         position: absolute;
                         transform: rotate(5deg);
+                        animation: waveTrans 1.3s;
                     }
+                }
+                .svg-2 {
+                    position: absolute;
+                    width: 1700px;
+                    height: 1700px;
                     .blue {
+                        width: 100%;
+                        position: absolute;
+                        transform: rotate(5deg);
                         position: absolute;
                         top: 0%;
                         left: 30%;
                         transform: rotate(0deg);
+                        animation: waveTrans 1s;
                     }
                 }
             }
@@ -287,5 +292,17 @@ svg .blue {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes waveTrans {
+    0% {
+        opacity: 0;
+        transform: rotate(-10deg);
+        transform-origin: right;
+    }
+    100% {
+        opacity: 1;
+        transform: tramslateY(0);
     }
 }
